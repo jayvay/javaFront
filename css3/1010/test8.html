@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test8.html</title>
+    <style>
+        * {
+            line-height: 25pt;
+        }
+        .c1 {
+            background-color: orange;
+        }
+        ol ul ol{ /* 자손 셀렉터(선택자) -공백으로 분리 : ol(부모) 아래 ul(자식) 아래 ol(자식)들에게 적용 */
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h2>css 연습</h2>
+    <h3>길동이가 좋아하는 음식 Best5</h3>
+    <ol>
+        <li>짬뽕</li>
+        <li>피자</li>
+        <ul>
+            <li class="c1">파파존스</li>
+            <li class="c1">피자헛</li>
+            <li class="c1">피자스쿨</li>
+        </ul>
+        <li>떡볶이</li>
+        <ul>
+            <li>엽떡</li>
+            <ol>
+                <li>기본</li>
+                <li>마라</li>
+                <li>로제</li>
+            </ol>
+            <li>신전</li>
+            <li>응급실</li>
+        </ul>
+        <li>찜닭</li>
+        <li>돈가스</li>
+    </ol>
+</body>
+</html>

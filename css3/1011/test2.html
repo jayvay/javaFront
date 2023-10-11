@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test2.html</title>
+    <style>
+        div, p {  /* 형제 셀렉터(선택자) : ',' 동등한 관계*/
+            background-color: lightgray;
+        }
+        div {   /* 블록은 남의 영역을 밀어내고 자기 영역 만듦 */
+            width: 80px;
+            border: 1px solid violet;
+            /* padding: 10px 20px 30px 40px; */
+            /* padding: 10px 20px 30px; */
+            /* padding: 10px 20px; */
+            padding: 20px; 
+            margin: 30px;
+        }
+        span {  /* 인라인은 남의 영역은 알 바 아님 */
+            background-color: skyblue;
+            padding: 20px;
+            margin: 30px;
+        }
+        </style>
+</head>
+<body>
+    <h2>블록/인라인 구조</h2>
+    <div>
+        안녕하세요<br/>
+        반가워요
+    </div>
+    <p>
+        <span>안녕</span>하세요<br/>
+        반가워요
+    </p>
+    <hr/>
+</body>
+</html>

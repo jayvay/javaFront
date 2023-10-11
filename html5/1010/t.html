@@ -1,0 +1,15 @@
+<html>
+<head>  <!--프레임은 body 필요없음-->
+  <title>프레임 연습하기(frameset : html4)</title>
+</head>
+<frameset rows="20%,80%" frameborder="0">
+  <frame src="t1.html" name="header" noresize>
+  <frameset cols="180px,*">  <!--프레임 쪼개기-->
+    <frame src="t2.html" name="left" noresize>
+    <frame src="t3.html" name="content">
+  </frameset>
+  <noframes> <!--프레임 지원하지 않을 때(인터넷익스플로러 낮은 버전의 경우... 보통은 지원함)-->
+    <p>이 페이지를 보려면 프레임을 지원하는 브라우저가 필요합니다.</p>
+  </noframes>
+</frameset>
+</html>

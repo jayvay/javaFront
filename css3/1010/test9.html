@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test9.html</title>
+    <style>
+        * {
+            line-height: 25pt;
+        }
+        .c1 {
+            background-color: orange;
+        }
+        ol ul ol{ /* 자손 셀렉터(선택자) -공백으로 분리 : 자손 모두 */
+            background-color: pink;
+        }
+        #i1 > li { /* 자식 셀렉터(선택자) -'>'로 분리 : 내 바로 밑의 자식만 (자식의 자식은 안돼..자식과 자손은 다르다..)*/
+            background-color: green;
+        }
+        ol > ol > ul > ul > li {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>css 연습</h2>
+    <h3>길동이가 좋아하는 음식 Best5</h3>
+    <ol>
+        <li>짬뽕</li>
+        <li>피자</li>
+        <ul>
+            <li class="c1">파파존스</li>
+            <li class="c1">피자헛</li>
+            <li class="c1">피자스쿨</li>
+        </ul>
+        <li>떡볶이</li>
+        <ul>
+            <li>엽떡</li>
+            <ol>
+                <li>기본</li>
+                <li>마라</li>
+                <li>로제</li>
+            </ol>
+            <li>신전</li>
+            <li>응급실</li>
+        </ul>
+        <li>찜닭</li>
+        <ol id="i1">
+            <li>두찜</li>
+            <ul>
+                <li>까만찜닭</li>
+                <li>빨간찜닭</li>
+                <ul>
+                    <li>중국당면</li>
+                    <li>우동사리</li>
+                    <li>라면사리</li>
+                </ul>
+            </ul>
+            <li>최대감찜닭</li>
+            <li>일미리금계찜닭</li>
+        </ol>
+        <li>돈가스</li>
+    </ol>
+</body>
+</html>
