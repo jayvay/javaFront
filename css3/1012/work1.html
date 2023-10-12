@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>work1.html</title>
+    <style>
+        fieldset {
+            width: 500px;
+            margin: 20px;
+            padding: 10px;
+        }
+        .sign {
+            text-align: center;}
+        legend {text-align: left;}
+        .btn {
+            text-align: center;
+        }
+        .sub {
+            width: 530px;
+            padding: 0px 50px;
+        }
+        .star {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <fieldset>
+                <legend>로그인</legend>
+                    <label for="mid">아이디</label>
+                    <input type="text" name="mid" id="mid" size="10" autofocus required />
+                    <label for="pwd">비밀번호</label>
+                    <input type="password" name="pwd" id="pwd" size="20"/>
+                    <input type="submit" value="로그인" />
+            </fieldset>
+            <fieldset>
+                <legend>가입하기</legend>
+                    <p class="sign">
+                        <label for="mid">아이디<span class="star">*</span></label>
+                        <input type="text" name="mid" id="mid" placeholder="아이디를 입력하세요" autofocus required />
+                    </p>
+                    <p class="sign">
+                        <label for="pwd">비밀번호<span class="star">*</span></label>
+                        <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요" required/>
+                    </p>
+                    <p class="sign">
+                        <label for="pwd2">비밀번호 확인<span class="star">*</span></label>
+                        <input type="password" name="pwd2" id="pwd2" placeholder="입력한 비밀번호를 확인하세요" required/>
+                    </p>
+                    <p class="sign">
+                        <label for="name">이름<span class="star">*</span></label>
+                        <input type="text" name="name" id="name" placeholder="이름을 입력하세요"/>
+                    </p>
+                    <p class="sign">
+                        <label for="email">메일 주소<span class="star">*</span></label>
+                        <input type="text" name="email" id="email" placeholder="이메일을 입력하세요"/>
+                    </p>
+                    <p class="sign">
+                        <label for="tel">전화번호</label>
+                        <input type="tel" name="tel" id="tel" placeholder="전화번호를 입력하세요"/>
+                    </p>
+            </fieldset>
+            <fieldset class="btn">
+                <input type="submit" value="가입하기" />
+                <input type="reset" value="다시쓰기" />
+            </fieldset>
+            <fieldset>
+                <legend>수강 과목을 선택하세요 (1과목 선택 가능)</legend>
+                    <p class="sub">
+                        <label for="subject">신청 과목(회화)</label>
+                        <input type="radio" name="con" id="con" value="영어 회화(초급)" />영어 회화(초급)
+                        <input type="radio" name="con" id="con" value="영어 회화(중급)" />영어 회화(중급)
+                        <input type="radio" name="con" id="con" value="영어 회화(고급)" />영어 회화(고급)
+                    </p>
+                    <p class="sub">
+                        <label for="subject">신청 과목(자격)</label>
+                        <input type="radio" name="cer" id="cer" value="TOEIC" />TOEIC
+                        <input type="radio" name="cer" id="cer" value="TOEFL" />TOEFL
+                        <input type="radio" name="cer" id="cer" value="OPIC" />OPIC
+                    </p>
+            </fieldset>
+            <div>
+                <h4>등록 정보</h4>
+                <p>
+                    <label for="mem">참여 인원(최대 10명)</label>
+                    <input type="number" name="member" id="member" value="0" min="0" max="10" />
+                </p>
+                <p>
+                    <label for="pro">지원 물품(1인당 5개)</label>
+                    <input type="number" name="product" id="product" value="0" 
+                    min="0" max="5" />
+                </p>
+                <p>
+                    <label for="stg">희망 단계(하,중,상)</label>
+                    <input type="number" name="stage" id="stage" value="0" min="0" max="10" />
+                </p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

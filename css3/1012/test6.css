@@ -1,0 +1,53 @@
+body {
+    margin: 0px;
+    font-size: 0.8em;
+}
+.container {
+    background-color: beige;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    flex-direction: row; /*기본(행 기준)*/
+    flex-wrap: nowrap; /*기본이 nowrap*/
+    flex-wrap: wrap; 
+    /* flex-wrap: wrap-reverse;  */
+
+    /*justify-content: flex-start; 기본이 flex-start*/
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /*공백 균등 분할*/
+    justify-content: space-evenly;  /*공백 균등하게*/
+    justify-content: space-between; /*공백*/
+    justify-content: space-around; /*공백 돌아간다*/
+
+    align-items: center;  /*가운데 정렬*/
+    align-items: baseline;  /*가운데 정렬*/
+
+    align-content: space-between;
+    align-content: space-around;
+    align-content: center;
+}
+.item {
+    width: 70px;
+    height: 70px;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.item:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+}
+
+.item1 { background-color: #25E6DB;}
+.item2 { background-color: #2575E6;}
+.item3 { background-color: #25B2E6;}
+.item4 { background-color: #25E69A;}
+.item5 { background-color: #2538E6;}
+.item6 { background-color: #8225e6;}
+.item7 { background-color: #b925e6;}
+.item8 { background-color: #82e625;}
+.item9 { background-color: #e65c25;}
+.item10 { background-color: #e6c925;}

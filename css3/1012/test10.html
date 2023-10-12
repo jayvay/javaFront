@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test10.html</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: 
+                'header header'
+                'aside content'
+                'footer footer';
+            grid-template-rows: 150px 1fr 100px;
+            grid-template-columns: 150px 1fr;
+            /* height: 1000px; */
+        }
+        .item {
+            padding: 10px 15px;
+            font-size: 20pt;
+            line-height: 50px;
+            color: white;
+        }
+        .header {
+            grid-area: header;
+            background-color: darkmagenta;
+            /* height: 100px; */
+        }
+        .aside {
+            grid-area: aside;
+            background-color: rosybrown;
+            /* height: 200px; */
+        }
+        .content {
+            grid-area: content;
+            background-color: darkslateblue;
+            /* height: 200px; */
+        }
+        .footer {
+            grid-area: footer;
+            background-color: peru;
+            /* height: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">header</div>
+        <div class="item aside">aside</div>
+        <div class="item content">
+            <p>content1</p>
+            <p>content2</p>
+            <p>content3</p>
+            <p>content4</p>
+            <p>content5</p>
+            <p>content6</p>
+            <p>content7</p>
+            <p>content8</p>
+            <p>content9</p>
+            <p>content10</p>
+            <p>content12</p>
+            <p>content13</p>
+            <p>content14</p>
+            <p>content15</p>
+            <p>content16</p>
+            <p>content17</p>
+            <p>content18</p>
+            <p>content19</p>
+            <p>content20</p>
+            <p>content21</p>
+            <p>content22</p>
+            <p>content23</p>
+            <p>content24</p>
+            <p>content25</p>
+            <p>content26</p>
+            <p>content27</p>
+            <p>content28</p>
+            <p>content29</p>
+            <p>content30</p>
+            <p>content31</p>
+            <p>content32</p>
+            <p>content33</p>
+            <p>content34</p>
+            <p>content35</p>
+            <p>content36</p>
+            <p>content37</p>
+            <p>content38</p>
+            <p>content39</p>
+            <p>content40</p>
+        </div>
+        <div class="item footer">footer</div>
+    </div>
+</body>
+</html>

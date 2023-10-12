@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>work2.html</title>
+    <style>
+        .tit {
+            margin: 30px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="tit">
+        <h2>여름방학 특강 신청</h2>
+        <form>
+            <fieldset>
+                <legend>수강 신청인</legend>
+                <p>
+                    <label for="clnum">학번</label>
+                    <input type="number" name="classnumber" id="classnumber"/>
+                </p>
+                <p>
+                    <label for="irum">이름</label>
+                    <input type="text" name="irum" id="irum"/>
+                </p>
+                <p>
+                    <label for="major">학과</label>
+                    <select>
+                        <option>컴퓨터공학과</option>
+                        <option>기계공학과</option>
+                        <option>전기공학과</option>
+                        <option>토목공학과</option>
+                        <option>건축공학과</option>
+                    </select>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>수강 과목을 선택하세요</legend>
+                <p>선호색상 <input type="color"></p>
+                <p class="sub">
+                    <label for="subject">신청 과목(회화)</label>
+                    <input type="radio" name="con" id="con" value="영어 회화(초급)" />영어 회화(초급)
+                    <input type="radio" name="con" id="con" value="영어 회화(중급)" />영어 회화(중급)
+                    <input type="radio" name="con" id="con" value="영어 회화(고급)" />영어 회화(고급)
+                </p>
+                <p class="sub">
+                    <label for="subject">신청 과목(자격)</label>
+                    <input type="radio" name="cer" id="cer" value="TOEIC" />TOEIC
+                    <input type="radio" name="cer" id="cer" value="TOEFL" />TOEFL
+                    <input type="radio" name="cer" id="cer" value="OPIC" />OPIC
+                </p>
+                <p>
+                    <label for="interest">관심분야</label>
+                    <input type="checkbox" name="interest" value="문법" />문법
+                    <input type="checkbox" name="interest" value="Vocabulary" />Vocabulary
+                    <input type="checkbox" name="interest" value="회화" />회화
+                    <input type="checkbox" name="interest" value="리스닝" />리스닝
+                    <input type="checkbox" name="interest" value="뉴스 청취" />뉴스 청취
+                    <input type="checkbox" name="interest" value="독해" />독해
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>강의 시간을 선택하세요</legend>
+                <p>개강 주 <input type="date"></p>
+                <p>강의 시간 <input type="time"></p>
+            </fieldset>
+        </form>
+    </div>
+    <div class="tit">
+        <h2>특강 신청</h2>
+        <form>
+            <fieldset>
+                <legend>수강과목</legend>
+                <p>영어회화(초급) <input type="time"></p>
+            </fieldset>
+            <fieldset>
+                <legend>신청자</legend>
+                <p>
+                    <label for="irum">이름</label>
+                    <input type="text" name="irum" id="irum"/>
+                </p>
+                <p>
+                    <label for="clnum">학번</label>
+                    <input type="number" name="classnumber" id="classnumber"/>
+                </p>
+                <p>
+                    <label for="major">학과</label>
+                    <select>
+                        <option>컴퓨터공학과</option>
+                        <option>기계공학과</option>
+                        <option>전기공학과</option>
+                        <option>토목공학과</option>
+                        <option>건축공학과</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="tel">연락처</label>
+                    <input type="tel" name="tel" id="tel" placeholder="연락처를 입력하세요"/>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>교재 주문</legend>
+                <p>
+                    <label for="book">교재</label>
+                    <input type="number" name="book" id="book" value="0" min="0"/>
+                </p>
+                <p>
+                    <label for="book">워크시트</label>
+                    <input type="number" name="book" id="book" value="0" min="0"/>
+                </p>
+                <p>
+                    <label for="book">단체주문</label>
+                    <input type="number" name="book" id="book" value="0" min="0" />
+                </p>
+            </fieldset>
+            <fieldset class="btn">
+                <input type="submit" value="가입하기" />
+                <input type="reset" value="다시쓰기" />
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
