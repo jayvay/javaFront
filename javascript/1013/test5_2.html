@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test5_2.html</title>
+    <script>
+        //자바스크립트는 원래 변수 사용 후 선언해도 된다.(호이스팅)
+        //var의 문제점 때문에 let,const,'use strict'가 나옴
+        
+        //'use strict'; //자바처럼 변수 선언을 무조건 먼저 해야 사용할 수 있게 하는 명령
+        let sbs; //let : 변수 선언 후 사용해야 하는 타입
+        const kbs = 100; //자바의 static final 과 같다.
+        //kbs = 50; const는 값을 바꿀 수 없다.
+
+        cjb = 200;  //cjb 앞에 var이 생략되어 있음(호이스팅)
+        var seoul; //아무데나 선언해도 됨. 사용 후 선언해도 되는 타입(호이스팅)
+        
+        console.log("sbs : " , sbs);
+        console.log("kbs : " , kbs);
+        console.log("cjb : " , cjb);
+        console.log("seoul : " , seoul);
+        
+        function calc() {
+            sbs = mbc + 50;
+            console.log("sbs : " , sbs);
+        }
+
+        var mbc = 100;
+        </script>
+</head>
+<body>
+    <h2>변수의 선언</h2>
+    <input type="button" value="계산" onclick="calc()" />
+</body>
+</html>

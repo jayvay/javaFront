@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test5_3.html</title>
+    <script>
+
+        var atom1 = 100; //전역 변수 
+        let atom2 = 50;
+
+        function calc1() {
+            sbs = atom1 + 50;
+            console.log("sbs : " , sbs);
+
+            var atom1 = 500;
+        }
+
+        function calc2() {
+            sbs = atom2 + 50;
+            console.log("sbs : " , sbs);
+
+            atom2 = 500;
+        }
+
+        console.log("atom1 : " , atom1);
+        console.log("atom2 : " , atom2);
+
+    </script>
+</head>
+<body>
+    <h2>변수의 선언</h2>
+    <input type="button" value="계산1" onclick="calc1()" />
+    <input type="button" value="계산2" onclick="calc2()" />
+</body>
+</html>
