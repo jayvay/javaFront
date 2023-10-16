@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test11.html</title>
+    <script>
+        'use strict';
+
+        function fCheck() {
+            let gender = myform.gender.value; //document 생략 가능
+
+            if(gender == '남자') gender = "남자";
+            else gender = "여자";
+
+            demo.innerHTML = "<font color='blue'><b>" + gender + "</b></font>"
+        }
+    </script>
+</head>
+<body>
+    <h2>라디오 버튼 값 체크하기</h2>
+    <form name="myform">
+        <div>
+            <input type="radio" name="gender" id="genderm" value="남자" /> 남자
+            <input type="radio" name="gender" id="genderf" value="여자" checked /> 여자
+            <input type="button" value="성별체크" onclick="fCheck()" />
+        </div>
+    </form>
+    <hr/>
+    <div id="demo"></div>
+</body>
+</html>
