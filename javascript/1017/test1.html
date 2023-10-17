@@ -17,11 +17,11 @@
         let atom2 = '100';
         console.log("atom2의 타입 : ", typeof(atom2));
 
-        if(atom1 == atom2) console.log("atom1과 atom2는 같다.");    // == : 값
-        else console.log("atom1과 atom2는 다르다.");
+        if(atom1 == atom2) console.log("atom1과 atom2는 같다.1");    // == : 값 
+        else console.log("atom1과 atom2는 다르다.1");                // atom2의 문자열이 자동형변환 되어 atom1(숫자)과 같다고 나옴 
         
-        if(atom1 === atom2) console.log("atom1과 atom2는 같다.");   // ===(동치(일치)연산자) : 실제 값
-        else console.log("atom1과 atom2는 다르다.");
+        if(atom1 === atom2) console.log("atom1과 atom2는 같다.2");   // ===(동치(일치)연산자) : 실제 값으로 결과가 나오므로 다르다가 나옴
+        else console.log("atom1과 atom2는 다르다.2");
 
     </script>
 </head>

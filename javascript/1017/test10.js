@@ -25,7 +25,7 @@ num = Math.pow(2,5);    // 2의 5승
 num = Math.abs(su2);    // 절대값
 num = Math.sqrt(16);    // 뭐랬지
 
-num = su3.toFixed(2);   // 매개변수로 지정된 소수이하 자리수 까지 출력시켜준다.(반올림 처리 한다.)
+num = su3.toFixed(2);   // 매개변수로 지정된 소수 이하 자리수 까지 출력시켜준다.(반올림 처리 한다.)
 // num = su5.toFixed(0);
 
 // num = Math.round(su3);
