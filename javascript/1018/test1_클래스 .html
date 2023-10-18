@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1_클래스.html</title>
+    <script>
+        'use strict';
+
+        //클래스 생성
+        class Member {
+            //필드  //필드는 'use strict' 와 관계없이 타입 적지 않아도 됨
+            name;
+            age;
+
+            //생성자  - 오버로딩 불가 (기본생성자나 사용자정의생성자 둘 중 하나만)
+            //constructor() {}   //기본 생성자 
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+                // name; //틀림
+                // age;
+            }
+
+            //메소드
+            memberPrint() {
+                job = '학생';   //메소드(함수) 안의 변수는 변수니까 'use strict'면 타입을 적어 선언해야 함
+                console.log('성명 : ', this.name , ', 나이 : ' , this.age);
+                // ('성명 : ', this.name + ', 나이 : ' + this.age)
+            }
+        }
+            
+        //클래스 호출
+        let member = new Member('홍길동',25);
+        console.log('1.성명 :', member.name, ' , 나이 : ', member.age);
+        member.memberPrint();
+
+    </script>
+</head>
+<body>
+    <h2>클래스 연습</h2>
+</body>
+</html>
