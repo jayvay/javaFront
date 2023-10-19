@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test.html</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script>
+
+    <script>
+        'use strict';
+
+        let price = '';
+        let str = '';
+
+        function calc() {
+            let ea = document.getElementById("ea").value;
+            let ip15 = document.getElementById("ip15").value;
+
+            price = ip15 * ea;
+            str += `가격 : ${numberWithCommas(price)} 원\n`;
+            let vat =  price * 0.1;
+            str += `부가세(VAT) : ${numberWithCommas(vat)} 원\n`;
+            let finalPrice = price + vat;
+            str += `최종가(VAT포함) : ${numberWithCommas(finalPrice)} 원\n`;
+            demo.innerHTML = str;
+        }
+
+        function enterCheck() {
+            let product = document.getElementById("product").value;
+            let keyCode = window.event.keyCode;
+
+            console.log("keyCode : " + keyCode);
+
+            if(keyCode == 13) calc();
+        }
+
+        function numberWithCommas(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    </script>
+</head>
+<body>
+    <p><br/></p>
+    <div class="container">
+        <h2>상품 가격 계산</h2>
+        <form name="myform">
+            <p>상품명
+                <input type="text" name="product" id="product" autofocus class="form-control" />
+            </p>
+            <p>기종
+                <select id="ip15" class="form-select form-control">
+                    <option selected="사이즈 선택">기종 선택</option>
+                    <option value="1250000">아이폰15(1,250,000원)</option>
+                    <option value="1350000">아이폰15플러스(1,350,000원)</option>
+                    <option value="1550000">아이폰15프로(1,550,000원)</option>
+                    <option value="1900000">아이폰15프로맥스(1,900,000원)</option>
+                </select>
+            </p>
+            <p>수량(개)
+                <input type="number" name="ea" id="ea" onkeydown="enterCheck()" class="form-control" />
+            </p>
+            <p>
+                <button type="button" onclick="calc()" class="btn-lg btn-info" >가격확인 <i class="fa-solid fa-hand-holding-dollar"></i></button>
+                
+            </p>
+            <hr/>
+            <p>
+                <textarea class="form-control text-center" id="demo" rows="4" readonly></textarea>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

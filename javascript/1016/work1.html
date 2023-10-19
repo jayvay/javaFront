@@ -13,30 +13,34 @@
         'use strict';
         
         function calc() {
-            let su3 = myform.su3.value;
-            let su2 = myform.su2.value;
-            let su1 = myform.su1.value;
-            let temp;
+            let dan1 = document.getElementById("dan1").value;
+            let dan2 = document.getElementById("dan2").value;
+            let ncol = document.getElementById("ncol").value;
+            let temp = 0;
+            let str = '';
+            let cnt = 0;
             
-            if(su1 > su2) {
-                temp = su1;
-                su1 = su2;
-                su2 = temp;
+            if(dan1 == ""||dan2 == ""||ncol == "") {
+                alert("검색할 단과 출력할 열 수를 입력하세요");
+                return false;
             }
-            
-            let dan = "";
-            for(let i=su1; i<=su2; j++) {
-                dan += `${i}단<br/>`;
-                for(let j=1; j<10; k++) {
-                    dan += `${i} * ${j} = ${i * j}<br/>`;
-                    for(let k=0; k<su3; k++) {
-                        document.getElementById("demo").innerHTML = `<td>${dan}</td>`;
-                        // str +=`<div class="col"></div>`;
-                    }
+            if(dan1 > dan2) {
+                temp = dan1;
+                dan1 = dan2;
+                dan2 = temp;
+            }
+            str += '<table class="table table-bordered text-center"><tr>';
+            for(let i=dan1; i<=dan2; i++) {
+                str += `<td><b>${i}단</b><br/>`;
+                for(let j=1; j<10; j++) {
+                    str += `${i} * ${j} = ${i * j}<br/>`;
                 }
+                str += '</td>'
+                cnt++;
+                if(cnt % ncol == 0) str += '</tr><tr>'
             }
-            // document.getElementById("demo").innerHTML = dan;
-            
+            str += '</tr></table>'
+            demo.innerHTML = str;
 
         }
     </script>
@@ -73,17 +77,13 @@
     <div class="container">
         <h2>구구단</h2>
         <form name="myform">
-            <p>몇 단 <input type="number" name="su1" id="su1" class="form-control"></p>
-            <p>몇 단 <input type="number" name="su2" id="su2" class="form-control"></p>
-            <p>몇 열<input type="number" name="su3" id="su3" class="form-control"></p>
+            <p>몇 단 <input type="number" name="dan1" id="dan1" class="form-control"></p>
+            <p>몇 단 <input type="number" name="dan2" id="dan2" class="form-control"></p>
+            <p>몇 열로 출력<input type="number" name="ncol" id="ncol" class="form-control"></p>
             <p><input type="button" value="구구단" onclick="calc()" class="btn btn-warning form-control"></p>
         </form>
         <hr/>
-        <div>
-            <table>
-                    <div id="demo"></div>
-            </table>
-        </div>
+        <div id="demo"></div>
     </div>
 
 </body>
