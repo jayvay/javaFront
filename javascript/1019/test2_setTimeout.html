@@ -16,10 +16,13 @@
         let statusTime;
 
         function plus() {
-            clearTimeout(statusTime);
+            // clearTimeout(statusTime);
             num++;
-            statusTime = setTimeout(plus , 500)
+            // statusTime = setTimeout(plus , 500)
             demo.innerHTML = num;
+        }
+        function plus1(){
+            statusTime = setInterval(plus , 500)
         }
         function minus() {
             clearTimeout(statusTime);
@@ -43,7 +46,7 @@
             지연시간은 1/1000 초
         </pre>
         <p>
-            <input type="button" value="증가" onclick="plus()" class="btn btn-success" />
+            <input type="button" value="증가" onclick="plus1()" class="btn btn-success" />
             <input type="button" value="감소" onclick="minus()" class="btn btn-success" />
             <input type="button" value="정지" onclick="stop()" class="btn btn-danger" />
         </p>

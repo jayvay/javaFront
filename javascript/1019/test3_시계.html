@@ -27,9 +27,12 @@
             clock();
             statusTime = setTimeout(start, 1000);
         }
+        function start1() {
+            statusTime = setInterval(clock, 1000);
+        }
 
         function stop() {
-            clearTimeout(statusTime);
+            clearInterval(statusTime);
         }
 
     </script>
@@ -38,7 +41,7 @@
     <div class="container">
         <h2>인터넷 시계~</h2>
         <p>
-            <input type="button" value="동작" onclick="start()" class="btn btn-warning" />
+            <input type="button" value="동작" onclick="start1()" class="btn btn-warning" />
             <input type="button" value="정지" onclick="stop()" class="btn btn-danger" />
         </p>
         <hr/>

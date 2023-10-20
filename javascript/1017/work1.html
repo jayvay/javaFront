@@ -25,6 +25,12 @@
             else if(su == "="){
                 res = eval(res);
             }
+            else if(su == "+" || su == "-" || su == "*" || su == "/" || su == ".") {
+                let lastChar = res.charAt(res.length-1);
+                if(!(lastChar.includes("+")||lastChar.includes("-")||lastChar.includes("*")||lastChar.includes("/")||lastChar.includes(".")) && res.length != 0) {
+                    res += su;
+                }
+            }
             else res += su;
 
             demo.innerHTML = res;
