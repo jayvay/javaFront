@@ -1,61 +1,90 @@
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<title>댕댕 지식채널</title>
-<style>
-    #tit {
-        text-align: center;
-        background-color: wheat;
-        padding: 20px;
-        margin: 0px;
-    }
-    #img {
-        background-image: url("../../images/title.jpg");
-        padding: 80px;
-    }
-    .txt {
-        text-align: center;
-        margin: 20px;
-        
-    }
-    #wait {
-        color: brown;
-        font-size: 18pt;
-        font-weight: bold;
-    }
-    .que {
-        color: sienna;
-        position: relative;
-        top: 20px;
-        margin: 0px;
-        padding: 20px;
-        font-size: 17pt;
-        font-weight: bold;
-    }
-    ul {
-        background-color: lightgoldenrodyellow;
-        padding: 20px;
-    }
-    ul li {
-        margin: 0 30px;
-    }
-    a:hover {
-        color: chocolate;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>댕댕 지식채널</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <style>
+        body {
+            margin: 50px 300px;
+            width: 1280px;
+        }
+        #tit {
+            text-align: center;
+            background-color: wheat;
+            width: 100%;
+            padding: 20px;
+        }
+        #img {
+            background-image: url("../../images/배경.jpg");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 500px;
+            padding: 40px;
+        }
+        #wait {
+            color: brown;
+            font-size: 18pt;
+            font-weight: bold;
+        }
+        .que {
+            color: sienna;
+            position: relative;
+            top: 20px;
+            margin: 10px;
+            padding: 20px;
+            font-size: 17pt;
+            font-weight: bold;
+        }
+        .menu {
+            width: 100%;
+            text-align: center;
+        }
+        .menu li {
+            list-style: none;
+            float: left;
+            position: relative;
+            text-align: center;
+            display: inline-block;
+        }
+        .menu li a {
+            padding: 6px 8px;
+            display: block; 
+            width: 100%;
+            height: 40px;
+            background-color: paleturquoise;
+            color: black
+        }
+        .menu li a:hover {
+            background-color: cornflowerblue;
+            color: orange;
+        }
+    </style>
 </head>
 <body>
+    <h1 align="center" style="margin: 20px;">댕댕 지식채널</h1>
+    <div id="tit"><font size="5"><span id="wait">강아지</span> 는 귀엽다는 사실, 알고 계시나요?</font></div>
+    <div id="img"></div>
+    <div class="row">
+        <div class="col-8"><input type="text" name="search" id="search" placeholder="궁금한 사항을 검색하세요" style="width: 100%; height: 52px;" class="form-control mt-3" /></div>
+        <div class="col-2"><input type="button" value="검색" class="btn btn-warning mt-3" style="width: 60%; height: 75%; text-align: center"/></div>
+    </div>
+    <div class="que">▶ 강아지와 오래오래 행복하고 싶다면 알아야 할 상식</div>
+    <nav id="nav">
+        <ul class="menu">
+            <li><font size="5"><a href="hello2.html">사이트소개</font></a></li>
+            <li><font size="5"><a href="hello.html">견종백과</font></a></li>
+            <li><font size="5"><a href="hello2.html">댕댕지식</font></a></li>
+            <li><font size="5"><a href="hello2.html">고객센터</font></a></li>
+        </ul>
+    </nav>
 
-<h1 align="center">댕댕 지식채널</h1>
-<div id="tit"><font size="5"><span id="wait">강아지</span> 는 귀엽다는 사실, 알고 계시나요?</font></div>
-<div id="img">img</div>
-<div class="txt">
-    <input type="text" name="search" id="search" placeholder="궁금한 사항을 검색하세요" size="100px" style="height: 50px" />
-</div>
-<div class="que">▶ 강아지와 오래오래 행복하고 싶다면 알아야 할 상식</div>.
-<ul>
-<li><font size="5"><a href="hello.html">견종백과</font></a></li>
-<li><font size="5"><a href="hello2.html">강아지 건강</font></a></li>
-<li><font size="5"><a href="hello2.html">강아지 음식</font></a></li>
-</ul>
 </body>
 </html>

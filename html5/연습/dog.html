@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>댕댕 지식채널</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        #container {
+            text-align: center;
+            margin: 50px 330px;
+        }
+        #tit {
+            text-align: center;
+            background-color: wheat;
+            width: 100%;
+            padding: 20px;
+        }
+        #img {
+            display: block;
+            margin: 0 auto;
+            background-image: url("../../images/배경.jpg");
+            background-repeat: no-repeat;
+            width: 1280px;
+            height: 500px;
+            padding: 40px;
+        }
+        #wait {
+            color: brown;
+            font-size: 18pt;
+            font-weight: bold;
+        }
+        table {
+            display: flex;
+            justify-content: center;
+        }
+        #search {
+            width: 800px; 
+            height: 50px;
+            font-size: 13pt;
+            float: right;
+        }
+        #btn {
+            width: 100px; 
+            height: 55px; 
+            border: 2px solid gray;
+            text-align: center;
+            font-size: 13pt;
+            background-color: orange;
+            float: left;
+        }
+        #btn:hover {
+            background-color: rgb(228, 103, 0);
+            cursor: pointer;
+        }
+        #tv {
+            padding: 10px;
+            font-size: 12pt;
+            font-weight: bold;
+            background-color: wheat;
+            color: brown;
+            text-decoration: none;
+            border: 2px solid gray;
+        }
+        #tv:hover {
+            background-color: seagreen;
+            color: wheat;
+            cursor: pointer;
+        }
+        .menu li {
+            width: 290px;
+            list-style: none;
+            text-align: center;
+            display: inline-block;
+        }
+        .menu li a {
+            border-radius: 10px;
+            padding: 6px 10px;
+            display: block; 
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            background-color: burlywood;
+            color: black;
+            text-decoration: none;
+        }
+        .menu li a:hover {
+            background-color: brown;
+            color: orange;
+        }
+
+    </style>
+    <script>
+        'use strict';
+        
+        function newWindow() {
+            let url = "https://www.youtube.com/@Bodeumofficial";
+            let windowName = "newWindow";
+            let opt = 'width=600px, height=600px, top=400px, left=500px';
+            console.log(opt);
+            window.open(url, windowName, opt);
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1 align="center" style="margin: 20px;">댕댕 지식채널</h1>
+        <div id="tit"><font size="5"><span id="wait">강아지</span> 는 귀엽다는 사실, 알고 계시나요?</font></div>
+        <div id="img"></div>
+        <table>
+            <tr>
+                <td><input type="text" name="search" id="search" placeholder="궁금한 사항을 검색하세요" /></td>
+                <td><input type="button" value="검색" id="btn" /></td>
+            </tr>
+        </table>
+        <nav>
+            <ul class="menu">
+                <li><font size="5"><a href="dog.html">사이트소개</a></font></li>
+                <li><font size="5"><a href="hello.html">견종백과</a></font></li>
+                <li><font size="5"><a href="hello2.html">댕댕지식</a></font></li>
+                <li><font size="5"><a href="cs.html">고객센터</a></font></li>
+            </ul>
+        </nav>
+        <hr/>
+        <div style="font-size: 13pt;">
+            <br/>
+            <b><span style="font-size: 18pt;">모든 댕댕이는 소중해!</span></b><br/>
+            <br/>
+            우리 강아지와 오래오래 행복하고 싶다면 알아야 할 상식들에 대해 알아보세요!<br/>
+            견종백과를 통해 다양한 견종들의 특성과 귀여움을 알아보세요!<br/>
+            개통령 강형욱 훈련사님 유튜브 채널로 연결됩니다.<br/>
+            <br/>
+            <input type="button" id="tv" onclick="newWindow()" value="강행욱 선생님의 보듬TV 바로가기" />
+            <br/>
+        </div>
+        <hr/>
+    </div>
+</body>
+</html>
