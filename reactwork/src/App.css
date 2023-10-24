@@ -1,0 +1,14 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: darkblue;
+}
+.App {
+  width: 600px;
+  margin: 0 auto;
+  height: 800px;
+  background-color: chartreuse;
+}
+.title {
+  text-align: center;
+}
